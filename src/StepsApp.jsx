@@ -11,10 +11,11 @@ const StepsApp = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handlePrevious = () => {
-    if (step > 1) setStep(step - 1);
+    // When updating a state the function will receive the current state of the variable
+    if (step > 1) setStep((currentStep) => currentStep - 1);
   };
   const handleNext = () => {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) setStep((currentStep) => currentStep + 1);
   };
 
   return (
